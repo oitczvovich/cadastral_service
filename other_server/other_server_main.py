@@ -6,13 +6,13 @@ from fastapi.responses import JSONResponse
 
 # from app_cadastral.core.db import AsyncSession
 
-app_other = FastAPI(
+app = FastAPI(
     title='Сервер принятия решений',
     description="Сервер получает запрос от app_cadastral и генерирует ответ втечение 60 сек и записывает его в базу.",
 )
 
 
-@app_other.get('/need_result')
+@app.get('/need_result')
 async def result_cadastral(
         ):
     time = random.randint(1, 60)
@@ -21,7 +21,7 @@ async def result_cadastral(
     return JSONResponse(content={"result": result})
 
 
-@app_other.get('/ping')
+@app.get('/ping')
 def ping():
     return {'message': 'Сервер работает'}
 
