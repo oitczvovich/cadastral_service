@@ -1,11 +1,15 @@
-from fastadmin import fastapi_app as admin_app
-from fastapi import APIRouter, FastAPI
+from fastapi import APIRouter
 
-from app_cadastral.api.endpoints import (history_router,  # admin_router
-                                         ping_router, query_router,
-                                         result_router)
+from app_cadastral.api.endpoints import (
+    history_router,
+    ping_router,
+    query_router,
+    result_router,
+    user_router
+)
 
-main_router = APIRouter()
+main_router = APIRouter(prefix='/api')
+
 main_router.include_router(
     query_router, prefix='/query', tags=['Query']
 )
@@ -18,4 +22,4 @@ main_router.include_router(
 main_router.include_router(
     history_router, prefix='/history', tags=['History']
 )
-# main_router.include_router(admin_app)
+main_router.include_router(user_router)

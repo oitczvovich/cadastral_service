@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     ADMIN_USER_MODEL: str = 'SuperUser'
     ADMIN_USER_MODEL_USERNAME_FIELD: str = 'username'
     ADMIN_SECRET_KEY: str
+    admin_name: str
 
     class Config:
         env_file = '.env'

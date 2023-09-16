@@ -1,2 +1,2 @@
 from .land_plot import LandPlot  # noqa
-from .user import User, UserAdmin  # noqa
+from .user import User  # noqa

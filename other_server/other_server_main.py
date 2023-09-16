@@ -24,4 +24,3 @@ async def result_cadastral(
 @app.get('/ping')
 def ping():
     return {'message': 'Сервер работает'}
-
