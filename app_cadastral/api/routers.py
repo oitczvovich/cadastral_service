@@ -1,11 +1,10 @@
 from fastapi import APIRouter
 
-from app_cadastral.api.endpoints import (
+from api.endpoints import (
     history_router,
     ping_router,
     query_router,
     result_router,
-    user_router
 )
 
 main_router = APIRouter(prefix='/api')
@@ -22,4 +21,3 @@ main_router.include_router(
 main_router.include_router(
     history_router, prefix='/history', tags=['History']
 )
-main_router.include_router(user_router)

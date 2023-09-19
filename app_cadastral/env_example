@@ -1,0 +1,19 @@
+APP_TITLE=Кадастровый сервис
+DESCRIPTION=Сервис уточняет свободен ли земельный участок.
+
+
+DATABASE_URL=sqlite+aiosqlite:///data/cadastral.db
+SECRET=GER$yt5vg%SArfgrrgt45
+ADMIN_USER_MODEL=User
+ADMIN_USER_MODEL_USERNAME_FIELD=username
+ADMIN_NAME=admin
+ADMIN_SECRET_KEY=GER$yt5vg%SArfgrrgt45
+FIRST_SUPERUSER_PASSWORD=admin123
+FIRST_SUPERUSER_EMAIL=superTest@mailuser.com
+
+#настройка запросов к серверу
+URL_OTHER_SERVER=http://serverv_request:8080/need_result
+RETRY_INTERVAL=5  #Интервал запроса к серверу в секундах
+
+PAGINATION=5
+

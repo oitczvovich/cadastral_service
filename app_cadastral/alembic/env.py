@@ -9,9 +9,8 @@ from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from alembic import context
 
-# from app_cadastral.models.land_plot import LandPlot
 
-from app_cadastral.core.base import Base
+from core.base import Base
 
 load_dotenv('.env')
 # this is the Alembic Config object, which provides

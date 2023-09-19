@@ -18,6 +18,7 @@ async def result_cadastral(
     time = random.randint(1, 60)
     await sleep(time)
     result = random.randint(0, 1)
+    
     return JSONResponse(content={"result": result})
 
 

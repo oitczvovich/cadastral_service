@@ -3,7 +3,12 @@ from starlette import routing
 
 
 class Pagination:
-    def __init__(self, request: Request, total_count: int, page: int, size: int):
+    def __init__(
+        self, request: Request,
+        total_count: int,
+        page: int,
+        size: int
+    ):
         self.request = request
         self.total_count = total_count
         self.page = page

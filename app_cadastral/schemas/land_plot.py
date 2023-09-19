@@ -81,6 +81,17 @@ class LandPlotCreate(BaseModel):
                 return long
         raise ValueError('Не правильный формат данных долготы.')
 
+    class Config:
+        extra = Extra.forbid
+        schema_extra = {
+            'example': {
+                'cadastral_number': '00:00:0000000:00',
+                'lat': '45.123456',
+                'long': '-23.123456'
+
+            }
+        }
+
 
 class LandPlotDB(LandPlotBase):
     """Схема с данными из БД."""

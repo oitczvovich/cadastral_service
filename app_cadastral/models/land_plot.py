@@ -1,6 +1,6 @@
 from sqlalchemy import Boolean, Column, String
 
-from app_cadastral.core.db import Base
+from core.db import Base
 
 
 class LandPlot(Base):

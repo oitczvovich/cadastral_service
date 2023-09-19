@@ -9,11 +9,11 @@ class Settings(BaseSettings):
     secret: str = 'SECRET'
     description: str = 'Сервис уточняет свободен ли земельный участок.'
     first_superuser_email: Optional[EmailStr] = None
-    first_superuser_password: Optional[str] = None
+    FIRST_SUPERUSER_PASSWORD: Optional[str] = None
     ADMIN_USER_MODEL: str = 'SuperUser'
     ADMIN_USER_MODEL_USERNAME_FIELD: str = 'username'
     ADMIN_SECRET_KEY: str
-    admin_name: str
+    ADMIN_NAME: str
 
     class Config:
         env_file = '.env'
