@@ -99,6 +99,10 @@ INSERT INTO user (username, password, is_superuser, is_active) VALUES ('admin', 
 COMMIT;
 ```
 
+## Логирование
+В папке app_cadastral создается файл cadastral_log куда записываются логи c уровня INFO 
+
+
 ## Приложение
 Документация:
 

@@ -1,6 +1,5 @@
-from sqlalchemy import Column, String, Boolean
-
 from app_cadastral.core.db import Base
+from sqlalchemy import Boolean, Column, String
 
 
 class User(Base):

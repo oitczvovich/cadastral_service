@@ -1,8 +1,10 @@
-from fastapi import Request
 from starlette import routing
+
+from fastapi import Request
 
 
 class Pagination:
+    """Пагинация для вывода истории запросов."""
     def __init__(
         self, request: Request,
         total_count: int,

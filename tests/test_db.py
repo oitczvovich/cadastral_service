@@ -1,6 +1,5 @@
 from tests.conftest import BASE_DIR
 
-
 try:
     from app_cadastral.models.land_plot import LandPlot
 except (NameError, ImportError):
@@ -19,7 +18,6 @@ except (NameError, ImportError):
 def test_check_migration_file_exist():
     APP_DIR = BASE_DIR / 'app_cadastral'
     app_dirs = [d.name for d in APP_DIR.iterdir()]
-    print(app_dirs)
     assert 'alembic' in app_dirs, (
         'В корневой директории не обнаружена папка `alembic`.'
     )

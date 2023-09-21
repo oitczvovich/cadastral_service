@@ -3,7 +3,6 @@ import pytest
 
 def test_get_landplot_result(superuser_client, landplot_free, landplot_not_free):
     response = superuser_client.get('/api/result/1')
-    print('response', response.json())
     assert (
         response.status_code == 200
     ), "При GET-запросе к эндпоинту `/api/result/obj_id' должен возвращаться статус-код 200."

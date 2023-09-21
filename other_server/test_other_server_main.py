@@ -1,7 +1,5 @@
 from fastapi.testclient import TestClient
-
 from other_server.other_server_main import app
-
 
 client = TestClient(app)
 

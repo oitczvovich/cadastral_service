@@ -1,8 +1,8 @@
-from fastapi import APIRouter
-
 from app_cadastral.core.db import AsyncSessionLocal
 from app_cadastral.crud.land_plot import land_plot_crud
 from app_cadastral.schemas.land_plot import LandPlotDB
+
+from fastapi import APIRouter
 
 router = APIRouter()
 

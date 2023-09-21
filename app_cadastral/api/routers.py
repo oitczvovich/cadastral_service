@@ -1,11 +1,7 @@
-from fastapi import APIRouter
+from app_cadastral.api.endpoints import (history_router, ping_router,
+                                         query_router, result_router)
 
-from app_cadastral.api.endpoints import (
-    history_router,
-    ping_router,
-    query_router,
-    result_router,
-)
+from fastapi import APIRouter
 
 main_router = APIRouter(prefix='/api')
 

@@ -1,8 +1,9 @@
 import random
 from asyncio import sleep
 
-from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+
+from fastapi import FastAPI
 
 # from app_cadastral.core.db import AsyncSession
 

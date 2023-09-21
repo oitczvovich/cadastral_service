@@ -7,7 +7,6 @@ def test_get_all_landplot(superuser_client, landplot_free, landplot_not_free):
         'Список запросов к земельным участкам должен быть доступен.'
     )
     data = response.json()
-    print(data)
     assert data == {
         'results':
             [
