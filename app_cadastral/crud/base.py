@@ -5,7 +5,6 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 
-
 class CRUDBase:
     """Функции CRUD для объектов приложения."""
     def __init__(self, model):

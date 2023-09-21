@@ -3,10 +3,10 @@ import asyncio
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from core.db import get_async_session
-from crud.land_plot import land_plot_crud
-from schemas.land_plot import LandPlotCreate, LandPlotDB
-from services.utils import send_query
+from app_cadastral.core.db import get_async_session
+from app_cadastral.crud.land_plot import land_plot_crud
+from app_cadastral.schemas.land_plot import LandPlotCreate, LandPlotDB
+from app_cadastral.services.utils import send_query
 
 router = APIRouter()
 

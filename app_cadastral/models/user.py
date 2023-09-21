@@ -1,6 +1,6 @@
-import bcrypt
-from sqlalchemy import Column, Integer, String, Boolean
-from core.db import Base
+from sqlalchemy import Column, String, Boolean
+
+from app_cadastral.core.db import Base
 
 
 class User(Base):

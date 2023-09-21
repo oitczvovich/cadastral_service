@@ -1,16 +1,14 @@
 from fastadmin import fastapi_app as admin_app
+from fastadmin import SqlAlchemyModelAdmin, register
 from fastapi import FastAPI
-
-from api.routers import main_router
-from core.config import settings
 
 from sqlalchemy import select
 
-
-from fastadmin import SqlAlchemyModelAdmin, register
-from core.db import AsyncSessionLocal
-from models.user import User
-from models.land_plot import LandPlot
+from app_cadastral.api.routers import main_router
+from app_cadastral.core.config import settings
+from app_cadastral.core.db import AsyncSessionLocal
+from app_cadastral.models.user import User
+from app_cadastral.models.land_plot import LandPlot
 
 
 app = FastAPI(

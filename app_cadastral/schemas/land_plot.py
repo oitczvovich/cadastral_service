@@ -4,6 +4,15 @@ from typing import Optional
 from pydantic import BaseModel, Extra, Field, validator
 
 
+# class LandPlotQuery(BaseModel):
+#     cadastral_number: str
+#     lat: str
+#     long: str
+
+#     class Config:
+#         extra = Extra.forbid
+
+
 class LandPlotBase(BaseModel):
     """ Базовая схема для участка."""
     cadastral_number: Optional[str]

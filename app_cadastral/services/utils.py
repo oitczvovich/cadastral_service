@@ -4,9 +4,9 @@ import httpx
 import asyncio
 from dotenv import load_dotenv
 
-from core.db import AsyncSessionLocal
-from models.land_plot import LandPlot
-from .logging import logger
+from app_cadastral.core.db import AsyncSessionLocal
+from app_cadastral.models.land_plot import LandPlot
+from app_cadastral.core.logging import logger
 
 
 load_dotenv()

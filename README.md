@@ -38,10 +38,31 @@ _______
 
 
 ## Установка
-1. Скачать образ.
+1. Скачать образ проекта.
 ```bash
 git clone https://github.com/oitczvovich/cadastral_service
 ```
+
+## ТЕСТИРОВАНИЕ
+
+Активируйте venv и установите зависимости:
+
+``` bash
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements_by_test.txt
+```
+
+Вызвать тесты в папке проекты где лежит файл pytest.ini
+
+```bash
+pytest
+```
+
+Дождаться результатов продолжить интсаляцию проекта.
+_________
 
 P.S. Убедитесь, что на рабочей машине есть Docker и Docker-compose, иначе установите их.
 
@@ -61,11 +82,17 @@ docker-compose up -d
 docker-compose exec cadastral bash
 ```
 
-4. Подключиться к БД для создания суперпользователя. 
+4. Инициализировать миграцию.
+```bash
+alembic upgrade head
+```
+
+5. Подключиться к БД для создания суперпользователя. 
 ```bash
 sqlite3 data/cadastral.db
 ```
-5. Создать супер пользователя
+
+6. Создать супер пользователя
 ```bash
 BEGIN;
 INSERT INTO user (username, password, is_superuser, is_active) VALUES ('admin', '<password>', 1, 1);

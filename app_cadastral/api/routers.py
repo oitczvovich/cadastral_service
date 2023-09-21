@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from api.endpoints import (
+from app_cadastral.api.endpoints import (
     history_router,
     ping_router,
     query_router,

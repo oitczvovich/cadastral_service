@@ -4,10 +4,10 @@ from dotenv import load_dotenv
 from fastapi import APIRouter, Depends, Query, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from core.db import get_async_session
-from crud.history import history_crud
-from crud.land_plot import land_plot_crud
-from services.pagination import Pagination
+from app_cadastral.core.db import get_async_session
+from app_cadastral.crud.history import history_crud
+from app_cadastral.crud.land_plot import land_plot_crud
+from app_cadastral.services.pagination import Pagination
 
 load_dotenv()
 PAGINATION = os.getenv('PAGINATION')

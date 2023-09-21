@@ -5,7 +5,7 @@ from pydantic import BaseSettings, EmailStr
 
 class Settings(BaseSettings):
     app_title: str = 'Кадастровый сервис'
-    database_url: str
+    database_url: str = 'sqlite+aiosqlite:///data/cadastral.db'
     secret: str = 'SECRET'
     description: str = 'Сервис уточняет свободен ли земельный участок.'
     first_superuser_email: Optional[EmailStr] = None
